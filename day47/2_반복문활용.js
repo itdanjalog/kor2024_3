@@ -91,5 +91,35 @@ exampleDIV2객체.innerHTML = seatHtml
         강호동  ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●○○○○○○○○○○○○
         신동엽  ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●○○○○○○○○○○○○○○○○○○
 */
+// (1) 학생이름목록 과 학생점수목록을 배열 선언 
+let nameArray = [ '유재석' , '강호동' , '신동엽' ]
+let scores = [ 92 , 86 , 72 ]
+
+// (2) HTML에 출력할 html문자열 구성 , HTML에서 작성할 html코드를 JS에서 문자열로 작성중.
+let studentHTML = `<table> <tr> <th> 이름 </th> <th> 점수 시각화  </th> </tr> `
+for( let index = 0 ; index <= nameArray.length-1 ; index++ ){
+    // index는 0부터 마지막인덱스까지 1씩증가 반복 , 3회 반복
+    studentHTML += `<tr> <td> ${ nameArray[index] } </td>`              // 학생명 <td> 대입 
+        // (4) 점수 출력 
+        let scoreHTML = ``; // 동그라미 문자열을 구성하는 html문자열 
+        for( let score = 1 ; score <= 100 ; score++ ){
+            // - score는 1부터 100까지 1씩증가 반복 , 100회 반복
+            if( scores[index] >= score ){
+                // 만약에 index번쨰 점수가 현재 score보다 크면 
+                scoreHTML += `■`
+            }else{ // 아니면 , 
+                scoreHTML += `□`
+            }
+        } // for end 
+    studentHTML += ` <td> ${ scoreHTML } </td> </tr>`                  // 점수시각화 <td> 대입 
+} // for end 
+studentHTML += `</table>`
+
+// (3) 특정한 선택자의 마크업을 JS객체로 가져오기 
+let exampleDIV3객체 = document.querySelector('#exampleDIV3')
+exampleDIV3객체.innerHTML = studentHTML;    // - js에서 구성한 HTML코드를 대입한다.
+
+
+
 
 
