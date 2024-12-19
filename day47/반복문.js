@@ -104,6 +104,61 @@ for( let line = 1 ; line <= 5 ; line++ ){           // 1. 줄for문
 let body마크업객체 = document.querySelector('body') // * 선택자의 마크업을 JS객체로 반환 
 body마크업객체.innerHTML = outHTML; // JS마크업객체내 HTML 삽입/대입 
 
+// [7] 배열과 반복문 관계 
+let 과일배열 = [ '사과' , '포도' , '딸기' ]
+    // - 과일배열내 모든 요소를 하나씩 출력하세요.
+console.log( 과일배열[0] );
+console.log( 과일배열[1] );
+console.log( 과일배열[2] );
+    // 반복문 , 반복되는 console.log( 과일배열[ ] ); , 반복되지 않는 0 1 2
+for( let index = 0 ; index<=2 ; index++ ){
+    console.log( 과일배열[index] );
+}
+for( let index = 0 ; index<=과일배열.length-1 ; index++ ){
+    console.log( 과일배열[index] );
+}
+
+// [8] 반복문 주요 키워드 
+// (1) continue;
+for( let i = 1 ; i <= 5 ; i++ ){ // i는 1부터 5이하까지 1씩증가 반복 
+    if( i == 3 ){ continue; } // i가 3이면 증감식으로 이동해,아래코드가 실행되지 않는다.
+    console.log( i )    // 1 2 3(continue) 4 5 
+}
+// (2) break;
+for( let i = 1 ; i<=10 ; i++ ){
+    if( i == 5 ){ break; }
+    console.log( i );   // 1 2 3 4 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
