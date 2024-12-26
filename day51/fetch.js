@@ -96,22 +96,3 @@ fetch( 'https://reqres.in/api/users/2' , { method : 'DELETE'} )
     //.then( r => r.json() )  // SyntaxError: Failed to execute 'json' on 'Response': Unexpected end of JSON input
     .then( data => console.log( data ) )
     .catch( error => console.log( error) );
-    
-
-
- 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
